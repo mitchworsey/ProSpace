@@ -1,0 +1,18 @@
+.layout{
+    font-family:century;
+    margin:20px;
+}
+.pagewidth{
+    width:1200px;
+}
+#align_right{
+    text-align:right;
+}
+.navbar{
+    margin-right:auto; 
+    margin-left:auto; 
+    width:560px; 
+    background-color:#66ccff; 
+    font-weight:bold; 
+    font-size: 30px;
+}

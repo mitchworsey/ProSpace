@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head class="layout pagewidth">
+        <link rel="stylesheet" href="CS351FinalProject.css">
+        
+        <script type="text/javascript" src="CS351FinalProjectValidation.js">
+        </script>
+        
+        <style>
+            .title{
+                text-align:center; 
+                font-size:120px;
+                color:white;
+            }
+            .logIn{
+                background-color:#66ccff;
+                color:white;
+            }
+            
+        </style>
+        
+        <title>Welcome to ProSpace</title>
+        
+        <p class="title">ProSpace</p>
+        
+    </head>
+    
+<body style="width:auto" class="layout logIn">
+    
+    
+    <table style="width:900px" align="center">
+        <tr>
+            <th style="font-size:36px; text-align:left;">
+                Seeking Talent
+            </th>
+            <th style="font-size:36px; text-align:right;">
+                Current Talent
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <form onsubmit="validate.php" method="post" name="formSeekingTalent" 
+                      style="text-align:left" action="CS351FinalProjectHOME.html">
+                    <table align="left">
+                        <tr>
+                            <td>
+                                Email
+                            </td>
+                            <td>
+                                Password
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="uEmail" id="uEmail" type="text">
+                            </td>
+                            <td>
+                                <input name="uPass" id="uPass" type="password">
+                            </td>
+                            <td>
+                                <input name="button" type="submit" value="Log In"/>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <br><br><br><br>
+                <a style="color:white" href="CS351FinalProjectComingSoon.html">Create a Seeking Talent Account</a>
+            </td>
+            <td style="text-align:right">
+                <form method="post" name="formSeekingTalent" 
+                      style="text-align:left" action="display.php">
+                    <table align="right">
+                        <tr style="text-align:left">
+                            <td>
+                                Email
+                            </td>
+                            <td>
+                                Password
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="uEmail" id="uEmail" type="text">
+                            </td>
+                            <td>
+                                <input name="uPass" id="uPass" type="password">
+                            </td>
+                            <td>
+                                <input name="button" type="submit" value="Log In"/>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <br><br><br><br>
+                <a style="color:white" href="CS351FinalProjectComingSoon.html">Create a Current Talent Account</a>
+            </td>
+        </tr>
+    </table>
+    
+    
+    
+
+    
+    
+    
+<br><br>
+<p style="text-align:center;">Copyright &copy; 2014 Mitch Worsey</p>
+</body>
+</html>

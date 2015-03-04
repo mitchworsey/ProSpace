@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head class="layout pagewidth">
+        <link rel="stylesheet" type="text/css" href="CS351FinalProject.css">
+        
+        <script src="jquery.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                $("#bigprofpic").hide();
+                $("#profpic").dblclick(function(){
+                    //$("#profpic").hide();
+                    $("#bigprofpic").show();
+                    /*$("#bigprofpic").animate({
+                        //left:'250px',
+                        width:'+=200px',
+                        height:'+=280px',
+                    });*/
+                    //$("#bigprofpic").fadeIn();
+                });
+                $("#bigprofpic").click(function(){ 
+                    /*$("#bigprofpic").animate({
+                        //right:'250px',
+                        width:'-=200px',
+                        height:'-=280px',
+                    });*/
+                    $("#bigprofpic").hide();
+                    //$("#profpic").fadeIn();
+                });
+                
+                $("#LXA").hide();
+                $("#ALD").hide();
+                $("#NSCS").hide();
+                $("#associations").toggle(
+                    function(){
+                        $("#LXA").show();
+                        $("#USC").hide();
+                        $("#ALD").hide();
+                        $("#NSCS").hide();
+                    },
+                    function(){
+                        $("#ALD").show();
+                        $("#LXA").hide();
+                        $("#USC").hide();
+                        $("#NSCS").hide();
+                    },
+                    function(){
+                        $("#NSCS").show();
+                        $("#ALD").hide();
+                        $("#USC").hide();
+                        $("#LXA").hide();
+                    },
+                    function(){
+                        $("#USC").show();
+                        $("#LXA").hide();
+                        $("#ALD").hide();
+                        $("#NSCS").hide();
+                    }
+                );
+                
+                
+            });
+        </script>
+        
+        <script type="text/javascript">
+            function startTime(){
+                var today=new Date();
+                var h=today.getHours();
+                var m=today.getMinutes();
+                var s=today.getSeconds();
+                // add a zero in front of numbers<10
+                m=checkTime(m);
+                s=checkTime(s);
+                document.getElementById('txt').innerHTML=
+                    "The current time is: " + h+":"+m+":"+s;
+                t=setTimeout(function(){startTime()},500);
+            }
+                
+            function checkTime(i){
+                if (i<10){
+                  i="0" + i;
+                }
+                return i;
+            }
+
+            function printName ( ) {
+                var uName = getName();
+                //document.write(uName);
+                document.getElementById('username').innerHTML=uName;
+            }
+            
+        </script>
+        
+        
+        
+        <style>
+           #left_bar{
+                font-size:18px; 
+                background-color:#66ccff; 
+                vertical-align:top; 
+                text-align:center; 
+                width:210px;
+            }
+            table{
+                width:1000px
+            }
+            button{
+                width:60px;
+                height:25px;
+            }
+        </style>
+        
+        <title>Mitch Worsey Professional Profile</title>
+        
+    </head>
+    
+<body class="layout pagewidth" onload="startTime(); printName();">
+    
+    <table class=pagewidth>
+        <tr>
+            <td id="username"><button  onclick="window.location.href='CS351FinalProjectLogIn.html'; alert('Thank you for visiting ProSpace.');">Log Out</button></td>
+            <td style="text-align:right" id="txt"></td>
+        </tr>
+    </table>
+
+        
+    <div class=navbar>
+        <a href="CS351FinalProjectHOME.html">Home</a> 
+        <a href="CS351FinalProjectResume.html">Resume</a> 
+        <a href="CS351FinalProjectCV.html">Curriculum Vitae (CV)</a>
+    </div>
+    
+    
+    <table class=pagewidth>
+    <tr><td>
+    <span style="float:left">
+    <img id="profpic" src="CompositePicture.jpg" alt="Profile Picture" width="200" height="280"/>
+    </span>
+    
+    <span style="position:fixed; top:20px; left:400px;">
+    <img id="bigprofpic" src="CompositePicture.jpg" alt="Profile Picture" width="500" height="700"/>
+    </span>
+        
+        
+    </td>
+    <td>
+    <span style="font-size:48px"><b>Mitch Jett Worsey</b></span><br><br>
+    <span style="font-size:20px">2065 Palmer Drive &#149; Pleasanton, CA &#149; 94588</span><br><br>
+    <span style="font-size:20px">(925) 895-8599 &#149; <a href="mailto:worsey@usc.edu">worsey@usc.edu</a></span>
+    </td>
+    <td>
+    <span id="associations" style="float:left">
+    <img id="USC" src="http://gfx.usc.edu/images/logo_usc_large2.png" alt="USC Logo" width="440" height="110"/>
+    
+    <img id="LXA" src="http://www.okstate.edu/osu_orgs/lca/images/ChromeIndex.jpg" alt="Lambda Chi Alpha Logo" width="440" height="110"/>
+        
+    <img id="ALD" src="http://www-scf.usc.edu/~ald/images/website%20design/banner.jpg" alt="Alpha Lambda Delta Logo" width="440" height="110"/>
+        
+    <img id="NSCS" src="http://upload.wikimedia.org/wikipedia/en/d/d4/NSCS_Logo.jpg" alt="NSCS Logo" width="440" height="110"/>
+    </span>
+    </td>
+    </tr>
+    </table>
+    
+<table class=pagewidth>
+    <tr>
+    <td id=left_bar><b>Miscellaneous Profiles</b>
+    <br><br>
+    <a target="_blank" href="http://www.linkedin.com/pub/mitch-worsey/84/780/42b">
+    <img src="http://computersforacause.org/wp-content/uploads/2013/12/Linkedin-logo-icon.png" width="60" height="60"/></a>
+    <br><br>
+        
+    <a target="_blank" href="https://github.com/mitchworsey">
+    <img src="github-10-512.png" width="80" height="80"/></a>
+    <br><br>   
+        
+    <a target="_blank" href="http://prezi.com/user/ydsmifr4uhas/">
+    <img src="http://upload.wikimedia.org/wikipedia/commons/1/1c/Prezi_logo_transparent_2012.png" width="120" height="120"/></a>
+    <br><br>
+    
+    </td>
+
+<td>
+
+    <table style="text-align:center">
+        <caption id="companies" style="font-size:32px; border-bottom-style:solid">Companies of Interest</caption>
+        
+        <tr>
+            <td><a target="_blank" href="http://www.twilio.com"><img src="http://www.twilio.com/packages/company/img/logos_downloadable_round.png" width="120" height="120"/></a></td>
+            <td><a target="_blank" href="http://www.salesforce.com"><img src="http://cdn3.techworld.com/cmsdata/news/3449937/sfdc_logo_cmyk_v1_2.jpg" width="160" height="120"/></a></td>
+            <td><a target="_blank" href="http://www.onlycoin.com"><img src="http://cdn.crowdfundinsider.com/shared/2013/11/Coin-Logo.png" width="120" height="120"/></a></td>
+        </tr>
+        
+        <tr>
+            <td><a target="_blank" href="http://www.squareup.com"><img src="https://evbdn.eventbrite.com/s3-s3/eventlogos/56627841/squarelogoportrait.png" width="160" height="120"/></a></td>
+            <td><a target="_blank" href="http://www.gogrid.com"><img src="http://www.coloandcloud.com/wp-content/uploads/2012/07/gogrid_logo_-1024x256.png" width="180" height="50"/></a></td>
+            <td><a target="_blank" href="http://www.apple.com"><img src="applelogo.png" width="80" height="80"/></a></td>
+        </tr>
+        
+        <tr>
+            <td><a target="_blank" href="http://www.google.com"><img src="http://www.seomofo.com/downloads/new-google-logo-knockoff.png" width="180" height="70"/></a></td>
+            <td><a target="_blank" href="http://www.vmware.com"><img src="http://www.ospcon.ru/files/uploads/image/%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5%20%D0%9A%D0%A0%D0%9E%D0%9A-17_02_2010/VMware_grey_logo.jpg" width="180" height="50"/></a></td>
+            <td><a target="_blank" href="http://www.nvidia.com"><img src="http://img.talkandroid.com/uploads/2011/09/nvidia-logo.jpg" width="180" height="120"/></a></td>
+        </tr>
+    </table>
+    
+    
+    
+    
+</td>
+</tr>
+</table>
+    
+<div style="text-align:center">Copyright &copy; 2014 Mitch Worsey</div>
+</body>
+</html>
